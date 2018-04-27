@@ -39,3 +39,9 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
     });
 
   });
+  
+$("#contacts").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contacts-block").offset().top
+    }, 2000);
+});

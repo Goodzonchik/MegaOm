@@ -19,7 +19,8 @@ body {
    img.logo {
 	height: 50px;
 	margin-left: 30px;
-}
+	}
+	
 img.megaLogo {
 	height: 40px;
 	width: auto;
@@ -108,6 +109,9 @@ img.megaLogo {
 #profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
 
 /*carusel*/
+
+.jumbotron{
+background-color: #e9ecefe8}
 </style>
 </head>
 <body>
@@ -116,11 +120,10 @@ img.megaLogo {
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Энергостроительство</a>
+        <a class="nav-link" id="energy-building" href="#">Энергостроительство</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="#">Электролаборатория</a>
@@ -132,7 +135,7 @@ img.megaLogo {
         <a class="nav-link" href="#">Проектирование</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Контакты</a>
+        <a class="nav-link" id="contacts" href="#">Контакты</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="#">Строительные работы</a>
@@ -159,42 +162,42 @@ img.megaLogo {
 <div class="jumbotron">
 <div class="row"><h3 class="d-block mx-auto">Основные направления услуг</h3></div>
 <div class="row">
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4">
 		<h4>Энергостроительство</h4>
 	</div>
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4">
 		<h4>Проектирование</h4>
 	</div>
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4">
 		<h4>Электролаборатория</h4>
 	</div>
 </div>
 <div class="row">
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4" >
 		<p>Электрификация объектов любой сложности</p>
 		<br>
 		<p> text text text </p>
 		<br>
 	</div>
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4" >
 		<p>Оказываем спектр услуг по проектированию различной сложности на протяжении 10 лет</p>
 		<br>
 		<p> text text text </p>
 		<br>
 	</div>
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4" >
 		<p>Электроизмерения любых объектов аккредитованной лабораторией</p>
 		<br>
 	</div>
 </div>
 <div class="row">
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4" >
 		<button class="btn btn btn-danger">Заказать</button>
 	</div>
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4" >
 		<button class="btn btn btn-danger">Заказать</button>
 	</div>
-	<div class="col-4" style="background-color: #e9ecef;">
+	<div class="col-4" >
 		<button class="btn btn btn-danger">Заказать</button>
 	</div>
 </div>
@@ -468,7 +471,7 @@ img.megaLogo {
 </div>
 
 <!--VIII-->
-<div class="jumbotron">
+<div class="jumbotron" id="contacts-block">
 	<div class="row">
 		<h2 style="width: 100%;">Контакты</h2>
 	</div>
