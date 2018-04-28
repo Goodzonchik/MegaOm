@@ -46,4 +46,10 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 		}, 750);
 	});
 	/**/
+
+	$(".nav-link").click(function() {
+		$(".nav-item").removeClass( 'active' );
+		this.parentNode.classList.add('active' );
+	});
 	
+  });
