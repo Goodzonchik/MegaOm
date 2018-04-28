@@ -5,17 +5,18 @@
 <!--<link rel="stylesheet" type="text/css" href="main.css">-->
 <link rel="stylesheet" type="text/css" href="src/styles/bootstrap.css">
 <script src="src/js/jquery-3.3.1.min.js"></script>
+<script src="src/js/jquery.mask.min.js"></script>
 <script src="src/js/bootstrap.js"></script>
 <script src="main.js"></script>
 <style>
-body {
-    background: url(Pictures/back.png) no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
-   }
-
+ body {
+    background: url(Pictures/back.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+   
    img.logo {
 	height: 50px;
 	margin-left: 30px;
@@ -97,21 +98,10 @@ img.megaLogo {
 
 }
 
- /* Bootstrap Lightbox using Modal */
-
-#profile-grid { overflow: auto; white-space: normal; } 
-#profile-grid .profile { padding-bottom: 40px; }
-#profile-grid .panel { padding: 0 }
-#profile-grid .panel-body { padding: 15px }
-#profile-grid .profile-name { font-weight: bold; }
-#profile-grid .thumbnail {margin-bottom:6px;}
-#profile-grid .panel-thumbnail { overflow: hidden; }
-#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
-
 /*carusel*/
 
 .jumbotron{
-background-color: #e9ecefe8}
+background-color: #e9eceff0}
 </style>
 </head>
 <body>
@@ -126,21 +116,26 @@ background-color: #e9ecefe8}
         <a class="nav-link" id="energy-building" href="#">Энергостроительство</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Электролаборатория</a>
+        <a class="nav-link" href="#" id="Electrolab">Электролаборатория</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Наши работы</a>
+        <a class="nav-link" href="#" id="own-works">Наши работы</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Проектирование</a>
+        <a class="nav-link" href="#" id="projecting">Проектирование</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" id="contacts" href="#">Контакты</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="#">Строительные работы</a>
+        <a class="nav-link" href="#" id="contacts">Контакты</a>
       </li>
     </ul>
+	<ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link">8 (923) 234-2334</a>
+    </li>
+	<li class="nav-item">
+      <button class="nav-link btn btn-danger btn-sm order-recall">Заказать обратный звонок</button>
+    </li>
+  </ul>
   </div>
 </nav>
 
@@ -172,40 +167,61 @@ background-color: #e9ecefe8}
 		<h4>Электролаборатория</h4>
 	</div>
 </div>
-<div class="row">
-	<div class="col-4" >
-		<p>Электрификация объектов любой сложности</p>
-		<br>
-		<p> text text text </p>
-		<br>
+<div class="row" style="text-align: left; font-size: 16px; text-align: justify;">
+	<div class="col-4">
+		<p>Электромонтаж - это наш один из основыных профилей. Обращаясь к нам, вы гарантировано получаете высокое качество проектирования и монтажа электросистем любой сложности.</p>
+		<p>В сферу энергостроительства входит:</p>
+		<ul>
+			<li>Проектирование систем электроснабжения;</li>
+			<li>Электромонтажные работы;</li>
+			<li>Сборка электрощитов;</li>
+			<li>Оформление документов;</li>
+			<li>Ремонт электрооборудования;</li>
+			<li>Аудит проектов и электроустановок; Обслуживание и эксплуатация электроустановок;</li>
+			<li>Все виды земельных работ со спец техникой.</li>
+		</ul>
+		<p>Наш квалифицированный персонал регулярно проходит проверку знаний по основам электробезопасности, пожарной безопасности, допущены к работам на высоте (2 и 3 группы), основам промышленной безопасности, ГПМ.</p>
+		<p>Члены бригад постоянно допускается в качестве командированного персонала ОАО «ЕЭСК», т.к. регулярно проходят инструктажи в районных отделения ОАО «ЕЭСК» и имеют все необходимые средства индивидуальной защиты для работы в действующих электроустановках.</p>
 	</div>
 	<div class="col-4" >
-		<p>Оказываем спектр услуг по проектированию различной сложности на протяжении 10 лет</p>
-		<br>
-		<p> text text text </p>
-		<br>
+		<p>Отличительная особенность нашей команды - это возможность предусмотреть все нюансы и трудности электромонтажа еще на этапе проектирования. Стоит отметить, что несогласованность проектировщиков и строителей может привести к значительным финансовым затратам заказчика.</p>
+		<p>Наши специалисты готовы оказать полный спектр услуг и сопровождать ваш проект от получения технических условий до сдачи электросетевой компании.</p>
 	</div>
 	<div class="col-4" >
-		<p>Электроизмерения любых объектов аккредитованной лабораторией</p>
-		<br>
+		<p>Компания "МегаОМ" осуществляет комплекс услуг по испытаниям, проверке и измерения различного назначения.</p>
+		<p>В этот комплекс входит:</p>
+		<ul>
+			<li>Визуальный осмотр;</li>
+			<li>проведение испытаний;</li>
+			<li>диагностика;</li>
+			<li>проведение измерений;</li>
+			<li>составление технического отчета и протокола4</li>
+		</ul>
+		<p>Также мы можем провести различные работы по обслуживанию кабельных сетей, например:</p>
+		<ul>
+			<li>найти место повреждения кабеля;</li>
+			<li>отыскать обрыв провода;</li>
+			<li>проверить приборы учета;</li>
+			<li>провести ремонт кабельной линии и проводки, в том числе ремонт изоляции, замену кабельных муфт;</li>
+		</ul>
 	</div>
 </div>
 <div class="row">
 	<div class="col-4" >
-		<button class="btn btn btn-danger">Заказать</button>
+		<button class="btn btn btn-danger order-recall">Заказать</button>
 	</div>
 	<div class="col-4" >
-		<button class="btn btn btn-danger">Заказать</button>
+		<button class="btn btn btn-danger order-recall">Заказать</button>
 	</div>
 	<div class="col-4" >
-		<button class="btn btn btn-danger">Заказать</button>
+		<button class="btn btn btn-danger order-recall">Заказать</button>
 	</div>
 </div>
 </div>
 
 <!-- III -->
 
-<div class="jumbotron">
+<div class="jumbotron" style="font-weight: bold">
 	<div class="row">
 		<div class="col-3">
 		10 лет успешной работы
@@ -230,7 +246,7 @@ background-color: #e9ecefe8}
 	</div>
 	<div class="row">
 		
-		<div class="container-fluid">
+<div class="container-fluid">
     <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
         <div class="carousel-inner row w-100 mx-auto" role="listbox">
             <div class="carousel-item col-md-3  active">
@@ -299,7 +315,7 @@ background-color: #e9ecefe8}
              <div class="carousel-item col-md-3  ">
                 <div class="panel panel-default">
                   <div class="panel-thumbnail">
-                    <a href="#" title="image 2" class="thumb">
+                    <a href="#" title="image 9" class="thumb">
                      <img class="img-fluid mx-auto d-block" src="Pictures/okey.png" alt="ОКей">
                     </a>
                   </div>
@@ -309,7 +325,7 @@ background-color: #e9ecefe8}
 			<div class="carousel-item col-md-3  ">
                 <div class="panel panel-default">
                   <div class="panel-thumbnail">
-                    <a href="#" title="image 2" class="thumb">
+                    <a href="#" title="image 10" class="thumb">
                      <img class="img-fluid mx-auto d-block" src="Pictures/logotip-moskovskiy-metropoliten.png" alt="metro">
                     </a>
                   </div>
@@ -319,7 +335,7 @@ background-color: #e9ecefe8}
 			<div class="carousel-item col-md-3  ">
                 <div class="panel panel-default">
                   <div class="panel-thumbnail">
-                    <a href="#" title="image 2" class="thumb">
+                    <a href="#" title="image 11" class="thumb">
                      <img class="img-fluid mx-auto d-block" src="Pictures/logotip-burger-king.png" alt="burger">
                     </a>
                   </div>
@@ -328,7 +344,7 @@ background-color: #e9ecefe8}
 			<div class="carousel-item col-md-3  ">
                 <div class="panel panel-default">
                   <div class="panel-thumbnail">
-                    <a href="#" title="image 2" class="thumb">
+                    <a href="#" title="image 12" class="thumb">
                      <img class="img-fluid mx-auto d-block" src="Pictures/logotip-rosseti.png" alt="rosseti">
                     </a>
                   </div>
@@ -352,7 +368,7 @@ background-color: #e9ecefe8}
 
 
 <!--II-->
-<div class="jumbotron">
+<div class="jumbotron" id="energy-building-block">
 	<div class="row">
 		<div class="col-6">
 		<img src="Slides/1.png" style="width:500px"/>
@@ -365,7 +381,7 @@ background-color: #e9ecefe8}
 		<p>Текст заглушка, побольше добавлю, чтобы было наверняка, несколько строчек и т.д. и т.п. потом заменю на нормальный текст</p>
 		<div class="row">
 			<div class="col-6">
-				<button class="btn btn btn-danger">Сделать заказ</button>
+				<button class="btn btn btn-danger order-recall">Сделать заказ</button>
 			</div>
 			<div class="col-6">
 				<button class="btn btn btn-danger">Наши сертификаты</button>
@@ -379,7 +395,7 @@ background-color: #e9ecefe8}
 
 <div class="jumbotron">
 	<div class="row">
-		<h2 style="width: 100%;">Стройка</h2>
+		<h2 style="width: 100%;">Строительные работы</h2>
 	</div>
 	<div class="row">
 		<div class="col-6">
@@ -413,7 +429,7 @@ background-color: #e9ecefe8}
 		</ul>
 		<div class="row">
 			<div class="col-12">
-				<button class="btn btn btn-danger">Заказать обратный звонок</button>
+				<button class="btn btn btn-danger order-recall">Заказать обратный звонок</button>
 			</div>
 		</div>
 		</div>
@@ -493,7 +509,7 @@ background-color: #e9ecefe8}
 		</div>
 	</div>
 </div>
-<div class="jumbotron">
+<div class="jumbotron" id="order-recall-block">
 	<div class="row">
 		<div class="col-6">
 			<iframe src="https://yandex.ru/map-widget/v1/-/CBqbYCaywB" width="500" height="500" frameborder="0"></iframe>
@@ -503,9 +519,9 @@ background-color: #e9ecefe8}
 			Ваше имя:
 			<input class="form-control"></input>
 			Телефон:
-			<input class="form-control"></input>
+			<input id="phone" class="form-control"></input>
 			Услуги:
-			<textarea class="form-control" style="height: 250px;"></textarea>
+			<textarea class="form-control" style="height: 250px; resize:none"></textarea>
 			<div style="text-align: center; margin-top: 20px">
 			<button class="btn btn btn-danger">Заказать обратный звонок</button>
 			</div>
@@ -526,6 +542,6 @@ background-color: #e9ecefe8}
     </div>
     <button class="arrow next">></button>
   </div>-->
-  </main>
+</main>
 </body>
 </html>

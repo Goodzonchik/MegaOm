@@ -22,26 +22,28 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 
 
   $('#carouselExample').carousel({ 
-                interval: 2000
+                interval: 1000
         });
 
 
   $(document).ready(function() {
-/* show lightbox when clicking a thumbnail */
-    $('a.thumb').click(function(event){
-      event.preventDefault();
-      var content = $('.modal-body');
-      content.empty();
-        var title = $(this).attr("title");
-        $('.modal-title').html(title);        
-        content.html($(this).html());
-        $(".modal-profile").modal({show:true});
-    });
-
-  });
-  
-$("#contacts").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#contacts-block").offset().top
-    }, 2000);
-});
+	  $('#phone').mask('+0 (000) 000-00-00');
+	 /*Скроллы*/
+	$("#contacts").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#contacts-block").offset().top - 90
+		}, 750);
+	});
+	$("#energy-building").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#energy-building-block").offset().top - 90
+		}, 750);
+	});
+	
+	$(".order-recall").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#order-recall-block").offset().top - 90
+		}, 750);
+	});
+	/**/
+	
