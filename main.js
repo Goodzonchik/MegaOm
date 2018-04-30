@@ -39,6 +39,26 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 			scrollTop: $("#energy-building-block").offset().top - 90
 		}, 750);
 	});
+
+	$("#electrolab").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#electrolab-block").offset().top - 90
+		}, 750);
+	});
+
+	$("#own-works").click(function() {
+			$('html, body').animate({
+				scrollTop: $("#own-works-block").offset().top - 90
+			}, 750);
+		});
+
+		$("#projecting").click(function() {
+			$('html, body').animate({
+				scrollTop: $("#projecting-block").offset().top - 90
+			}, 750);
+		});
+
+
 	
 	$(".order-recall").click(function() {
 		$('html, body').animate({
